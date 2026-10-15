@@ -27,7 +27,7 @@ public class Main {
 
         double newPrice = 0;
 
-//what about other inputs? 3,4,5
+//what about other inputs? 3,4,5,6
 
         if (customerAge <= 17) {
               newPrice = sandwichPrice - (sandwichPrice*studentDiscount);
