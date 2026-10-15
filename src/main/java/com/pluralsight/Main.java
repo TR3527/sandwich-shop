@@ -10,6 +10,8 @@ public class Main {
         System.out.print("Enter Sandwich size, 1(regular) 0r 2(large): ");
         int sandwichSize = reader.nextInt();
 
+        reader.nextLine();
+
         if(sandwichSize == 1){
             sandwichPrice= 5.45;
         } else if(sandwichSize != 1 && sandwichSize !=2){
@@ -18,6 +20,26 @@ public class Main {
         }else {
             sandwichPrice = 8.95;
         }
+
+        double regularLoaded = 1.00;
+        double largeLoaded = 1.75;
+        String answerOne = "yes";
+       // String answerTwo = "no";
+
+        System.out.print("Would you like the sandwich loaded?: ");
+        String loadedSandwich = reader.nextLine();
+
+
+        if (answerOne.equals(loadedSandwich) && sandwichSize == 1){
+           sandwichPrice = sandwichPrice + regularLoaded;
+        }else if(answerOne.equals(loadedSandwich) && sandwichSize ==2){
+            sandwichPrice = sandwichPrice + largeLoaded;
+
+        }else{
+            System.out.println("Loaded option not selected.");
+        }
+
+
 
         double studentDiscount = 0.10;
         double seniorDiscount = 0.20;
